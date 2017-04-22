@@ -36,6 +36,9 @@ public final class WrapperDemo {
    with an implementation of the same interface.
   */
   private static class BaseWrapper implements TransformText {
+  
+    private TransformText fShowText;
+
     BaseWrapper(TransformText aTransformText){
       fShowText = aTransformText;
     }
@@ -53,7 +56,6 @@ public final class WrapperDemo {
     String after(String aText){
       return aText;
     }
-    private TransformText fShowText;
   }
   
   private static final class Capitalize extends BaseWrapper {
