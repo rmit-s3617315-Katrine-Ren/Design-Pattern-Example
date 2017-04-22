@@ -1,3 +1,5 @@
+
+/** The Component/LCD interface */
 public interface TransformText {
   String render(String aInputText);
 } 
@@ -24,12 +26,14 @@ public final class WrapperDemo {
   private static void show(String aText){
     System.out.println(aText);
   }
-  
+   
+  /** The core class, which is called by client, Echo is an inner class */
   private static final class Echo implements TransformText{
     public String render(String aText) {
       return aText;
     }
   }
+  
   
   /**
    This class both implements the interface AND is constructed 
